@@ -10,16 +10,9 @@ data2 = zscore(data2);
 data3 = zscore(data3);
 
 
-data3(find(isnan(data3)==1)) = 0;
-
 W1 = kernel_eucl(data1,2);  
 W2 = kernel_eucl(data2,2);  
 W3 = kernel_eucl(data3,2); 
-
-% W1 = zscore(W1);
-% W2 = zscore(W2);
-% W3 = zscore(W3);
-
 
 K = 30;%number of neighbors, usually (10~30)
 alpha = 0.9; %hyperparameter, usually (0.3~0.8)
